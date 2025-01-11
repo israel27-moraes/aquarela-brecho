@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brechó sustentável com produtos de qualidade, incluindo roupas, brinquedos e artigos infantis. Localizado na Rua General Câmara, 268.">
+    <title>AQUARELA BRECHÓ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #d783df;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            border-bottom: 5px solid #000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #fadf44;
+            padding: 15px;
+            border-bottom: 5px solid #000;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 1.5em;
+            border-right: 5px solid #000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:last-child {
+            border-right: none;
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 40px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            font-size: 2em;
+        }
+        .section h2 {
+            color: #d783df;
+            margin-bottom: 20px;
+        }
+        .section p {
+            color: #333;
+        }
+        a.highlight-link {
+            color: #fff;
+            background-color: #008000;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-size: 1.5em;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        a.highlight-link:hover {
+            background-color: #005500;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #01f8cf;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            font-size: 1.5em;
+            position: relative;
+            border-top: 5px solid #000;
+            margin-top: auto;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>AQUARELA BRECHÓ</h1>
+    </header>
+    <nav>
+        <a onclick="showSection('home')" aria-label="Ir para a página inicial">Home</a>
+        <a onclick="showSection('produtos')" aria-label="Ver produtos disponíveis">Produtos</a>
+        <a onclick="showSection('sobre')" aria-label="Saber mais sobre o Aquarela Brechó">Sobre</a>
+        <a onclick="showSection('contato')" aria-label="Entre em contato">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Bem-vindo à AQUARELA BRECHÓ</h2>
+            <p>Oferecemos uma ampla variedade de produtos, incluindo roupas, brinquedos, artigos infantis e muito mais! Venha nos visitar na Rua General Câmara, 268.</p>
+            <p><em>"A vida é como uma aquarela, cada momento é uma nova cor."</em></p>
+            <p><em>"Transforme suas escolhas em arte."</em></p>
+        </section>
+        <section id="produtos" class="section">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300" alt="Imagem de um carrinho de bebê Moisés">
+            </div>
+            <div class="product-title">Carrinho de Bebê Moisés</div>
+            <div class="product-price">R$ 1.500</div>
+            <button class="btn-buy">Comprar</button>
+        </section>
+        <section id="sobre" class="section">
+            <h2>Sobre AQUARELA BRECHÓ</h2>
+            <p>
+                <strong>AQUARELA BRECHÓ</strong> é um lugar mágico onde moda, sustentabilidade e economia se encontram. Aqui você encontra roupas, brinquedos e artigos infantis de qualidade, promovendo a reutilização consciente e a economia circular.
+            </p>
+        </section>
+        <section id="contato" class="section">
+            <h2>Dúvidas?</h2>
+            <p>Caso tenha dúvidas, entre em contato por:</p>
+            <p>
+                <a href="https://wa.me/5547991901791" target="_blank" class="highlight-link" aria-label="Abrir WhatsApp">WhatsApp: 47 99190-1791</a>
+            </p>
+            <p>
+                <a href="mailto:moraesorimar@gmail.com" class="highlight-link" aria-label="Enviar e-mail">E-mail: moraesorimar@gmail.com</a>
+            </p>
+        </section>
+    </div>
+    <footer>
+        © 2025 AQUARELA BRECHÓ - Todos os direitos reservados.
+    </footer>
+</body>
+</html>
+
